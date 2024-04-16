@@ -1,0 +1,54 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Guitar Fundamentals",
+      "slug": "guitar-fundamentals",
+      "description": "Learn the basics of playing the guitar, including chords, strumming, and basic music theory.",
+      "price": 49.99,
+      "instructor": "John Smith",
+      "isFeatured": true,
+      "image": "guitar-fundamentals.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Piano Mastery",
+      "slug": "piano-mastery",
+      "description": "Master the piano with advanced techniques, improvisation, and classical repertoire.",
+      "price": 79.99,
+      "instructor": "Emily Johnson",
+      "isFeatured": false,
+      "image": "piano-mastery.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Music Production Essentials",
+      "slug": "music-production-essentials",
+      "description": "Learn how to produce music using software, mix tracks, and create professional-sounding recordings.",
+      "price": 59.99,
+      "instructor": "Alex Rodriguez",
+      "isFeatured": true,
+      "image": "music-production-essentials.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Singing for Beginners",
+      "slug": "singing-for-beginners",
+      "description": "Discover your voice and learn essential singing techniques, breathing exercises, and vocal warm-ups.",
+      "price": 39.99,
+      "instructor": "Sophia Lee",
+      "isFeatured": false,
+      "image": "singing-for-beginners.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Drums Workshop",
+      "slug": "drums-workshop",
+      "description": "Get hands-on with drumming techniques, rhythms, and styles, from rock to jazz.",
+      "price": 69.99,
+      "instructor": "Michael Brown",
+      "isFeatured": true,
+      "image": "drums-workshop.jpg"
+    }
+  ]
+}
