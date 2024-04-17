@@ -1,9 +1,12 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/moving-border";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import courseData from "../data/courseData.json";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
+import { BackgroundGradient } from "./ui/background-gradient";
+import { ButtonsCard } from "./ui/tailwindcss-buttons";
 
 interface Course {
   id: number;
@@ -34,20 +37,27 @@ function FeaturedCourses() {
       <div className="mt-10 ">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
           {featuredCourses.map((course: Course) => (
-            <CardContainer className="inter-var ">
-              <CardBody className="bg-gray-50  relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[30%] sm:w-[20rem] h-auto rounded-xl p-12 border  ">
-                <CardItem
-                  translateZ="50"
-                  className="text-xl font-bold text-neutral-600 dark:text-white"
-                >
-                  <div className="mt-6">
-                    <h1> {course.title}</h1>
-                    <p className="text-base font-light">{course.instructor}</p>
-                    <p className="text-sm font-thin">{course.description}</p>
-                  </div>
-                </CardItem>
-              </CardBody>
-            </CardContainer>
+            <div key={course.id} className="flex justify-center">
+              <BackgroundGradient className="flex flex-col rounded-[22px] bg-white dark:bg-zinc-800 overflow-hidden h-full max-w-sm">
+                <div className="p-4 sm:p-6 flex flex-col items-center text-center flex-grow ">
+                  <p className="text-lg sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
+                    {course.title}
+                  </p>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-400 flex-grow">
+                    {course.description}
+                  </p>
+                  {/* <Link className="border" href={`/courses/${course.slug}`}> */}
+                  <ButtonsCard>
+                    <Link href={`/courses/${course.slug}`}>
+                      <button className=" mt-4 inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-600 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                        Learn More
+                      </button>
+                    </Link>
+                  </ButtonsCard>
+                  {/* </Link> */}
+                </div>
+              </BackgroundGradient>
+            </div>
           ))}
         </div>
       </div>
