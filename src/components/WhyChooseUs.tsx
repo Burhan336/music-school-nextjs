@@ -73,6 +73,17 @@ const content = [
     title: "User-Friendly Interface",
     description:
       "Experience a user-friendly interface designed for simplicity and ease of use. Our intuitive interface makes navigation seamless, allowing you to focus on your work without any distractions.",
+    content: (
+      <div className="h-full w-full  flex items-center justify-center text-white">
+        <Image
+          src="/userfriendly.jpg"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="linear board demo"
+        />
+      </div>
+    ),
   },
 ];
 function WhyChooseUs() {
